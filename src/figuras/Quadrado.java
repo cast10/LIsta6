@@ -1,33 +1,26 @@
 package src.figuras;
 
-public class Quadrado implements Figuras{
+import java.util.Scanner;
 
-    double base;
-    double altura;
-    double area = base*altura;
+public class Quadrado implements Figuras {
 
-    public Quadrado(double base, double altura, double total) {
-        this.base = base;
-        this.altura = altura;
-        this.area = area;
-    }
-    public double getBase() {
-        return base;
+    double baseQuadrado;
+    double alturaQuadrado;
+    double areaQuadrado;
+
+
+    @Override
+    public void calcularArea() {
+        System.out.print("Digite base do Quadrado");
+        Scanner input = new Scanner(System.in);
+        baseQuadrado = input.nextDouble();
+        System.out.print("Digite altura do Quadrado");
+        alturaQuadrado = input.nextDouble();
+
+        areaQuadrado = baseQuadrado * alturaQuadrado;
+
+        System.out.println("A área total Quadrado é " + areaQuadrado);
 
     }
-    public void setBase(double base) {
-        this.base = base;
-    }
-    public double getAltura() {
-        return altura;
-    }
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-    public double getTotal() {
-        return area;
-    }
-    public void setTotal(double area) {
-        this.area = area;
-    }
+
 }

@@ -1,27 +1,27 @@
 package src.figuras;
 
+import java.util.Scanner;
 public class Circulo implements Figuras  {
 
-   int raio;
+
+
+        double pi = 3.14;
+        double diametro;
+        double raio;
+        double areaCirculo;
 
 
 
+    @Override
+        public void calcularArea() {
+        System.out.print("Digite a medida do diâmetro do círculo");
+        Scanner input = new Scanner(System.in);
+        diametro = input.nextDouble();
+        raio = diametro / 2;
 
-    public double areaRaio(){
+        areaCirculo = pi * (raio * raio);
 
-        this.raio = raio;
+        System.out.println("Considerando que a área total "+areaCirculo);
 
-
-
-      double area = Math.PI * Math.pow (raio, 2);
-      return area;
-    }
-
-    public int getRaio() {
-        return raio;
-    }
-
-    public void setRaio(int raio) {
-        this.raio = raio;
     }
 }

@@ -1,19 +1,23 @@
 package src.figuras;
-
+import java.util.Scanner;
 public class Triangulo implements Figuras {
 
-    double altura;
-    double base;
-    double areaTriangulo = ((base * altura) / 2);
+    double alturaTriangulo;
+    double baseTriangulo;
+    double areaTriangulo;
 
-    public Triangulo(double altura, double base, double areaTriangulo) {
-        this.altura = altura;
-        this.base = base;
-        this.areaTriangulo = areaTriangulo;
+    @Override
+    public void calcularArea() {
+        System.out.print("Digite base do triângulo");
+        Scanner input = new Scanner(System.in);
+        baseTriangulo = input.nextDouble();
+        System.out.print("Digite altura do triângulo ");
+        alturaTriangulo = input.nextDouble();
+
+        areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+
+        System.out.println("A area Triângulo é "+areaTriangulo);
     }
-
-    public void setTotal(double areaTriangulo) {
-        this.areaTriangulo = areaTriangulo;
-    }
-
 }
+
+

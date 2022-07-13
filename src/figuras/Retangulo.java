@@ -1,15 +1,26 @@
 package src.figuras;
 
+import java.util.Scanner;
+
 public class Retangulo implements Figuras {
 
       double alluraRetangulo;
       double baseRetabgulo;
-     double areaRetangulo = baseRetabgulo*alluraRetangulo;
+     double areaRetangulo;
 
 
-    public Retangulo(double alluraRetangulo, double baseRetabgulo) {
-        this.alluraRetangulo = alluraRetangulo;
-        this.baseRetabgulo = baseRetabgulo;
+
+    @Override
+    public void calcularArea() {
+        System.out.print("Digite base do retângulo");
+        Scanner input = new Scanner(System.in);
+        baseRetabgulo = input.nextDouble();
+        System.out.print("Digite altura do retângulo");
+        alluraRetangulo = input.nextDouble();
+
+        areaRetangulo = baseRetabgulo * alluraRetangulo;
+
+        System.out.println("A área total Retângulo é "+areaRetangulo);
     }
-
 }
+
